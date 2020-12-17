@@ -108,8 +108,8 @@
 ;; Basic UI Configuration
 ;; =====================
 ;; You will most likely need to adjust this font size for your system!
-(defvar efs/default-font-size 180)
-(defvar efs/default-variable-font-size 180)
+(defvar efs/default-font-size 120)
+(defvar efs/default-variable-font-size 120)
 
 ;; Make frame transparency overridable
 (defvar efs/frame-transparency '(90 . 90))
@@ -150,13 +150,15 @@
 ;; (windmove-default-keybindings)
 
 ;; Font Configure 
-;; ;; Not work "Font not available"
-;; ;; (set-face-attribute 'default nil :font "Fira Code Retina" :height 280)
-;; (set-face-attribute 'default nil :font "Fira Code Retina" :height efs/default-font-size)
-;; ;; Set the fixed pitch face
-;; (set-face-attribute 'fixed-pitch nil :font "Fira Code Retina" :height efs/default-font-size)
-;; ;; Set the variable pitch face
-;; (set-face-attribute 'variable-pitch nil :font "Cantarell" :height efs/default-variable-font-size :weight 'regular)
+;; Not work "Font not available"
+(set-face-attribute 'default nil :height 280)
+;; (set-face-attribute 'default nil :family "Source Code Pro" :height 280)
+(set-face-attribute 'default nil :height efs/default-font-size)
+;; Set the fixed pitch face
+(set-face-attribute 'fixed-pitch nil :height efs/default-font-size)
+;; Set the variable pitch face
+;; (set-face-attribute 'variable-pitch nil :height efs/default-variable-font-size :weight 'regular)
+(set-face-attribute 'variable-pitch nil :height efs/default-variable-font-size :weight 'normal)
 ;; Theme from doom-theme
 ;; https://github.com/hlissner/emacs-doom-themes
 ;; (load-theme 'material t)            ;; Load material theme
